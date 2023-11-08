@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>java中8种基本类型</title>
+      <link href="/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-分析"><a href="#1-分析" class="headerlink" title="1.分析"></a>1.分析</h3><h3 id="1-1-八种基本数据类型的分类"><a href="#1-1-八种基本数据类型的分类" class="headerlink" title="1.1 八种基本数据类型的分类"></a>1.1 八种基本数据类型的分类</h3><p>从数据类型的值来看,可以分为整数部分、小数部分和特殊部分</p><p>整数部分有byte short int long</p><p>小数部分有float和double</p><p>特殊部分有char(字符)和boolean(布尔)</p><h3 id="1-2-数据类型的取值范围如何记忆"><a href="#1-2-数据类型的取值范围如何记忆" class="headerlink" title="1.2 数据类型的取值范围如何记忆?"></a>1.2 数据类型的取值范围如何记忆?</h3><p>一般来说:取值范围为[2-(n-1),2n-1-1],其中n代表位数,<em><em>位数&#x3D;字节数\8</em>;<br>整型从小到大的字节数分别为</em><em>1,2,4,8</em>*</p><p>布尔类型boolean为<strong>1</strong>,char的字节数为<strong>2</strong>,</p><p>float字节数为4,double字节数为8</p><p>字节数的记忆就是两套1 2 4 8,其中一套为整型,它的排列为升序(从小到大)</p><p>一套是特殊加上小数的组合,</p><p>其中特殊部分 按照英文字母顺序<strong>升序</strong> 排列(先b后c)</p><p>小数部分 按照英文字母<strong>降序</strong>(f–&gt;d)排列</p><p>我们常说,<strong>特殊有优先待遇,因而特殊在前面</strong></p><p>所以1,2,4,8对应的排列就为: boolean char float double</p><p>而特殊部分除了有优先待遇,还有<strong>自身的特殊</strong></p><p>boolean用于<strong>条件判断</strong>,值为false或true</p><p><strong>char类型不带符号</strong>,所以取值只取大于等于0且小于等于2n-1</p><h3 id="1-3-数据类型的默认值如何记忆"><a href="#1-3-数据类型的默认值如何记忆" class="headerlink" title="1.3 数据类型的默认值如何记忆?"></a>1.3 数据类型的默认值如何记忆?</h3><p>默认值为啥都没有,在整数部分中体现形式为0,单精度体现形式为0.0</p><p>双精度体现形式为0.00,char类型体现形式为空格,boolean类型的体现形式为false</p><h3 id="2-八种基本数据类型汇总表"><a href="#2-八种基本数据类型汇总表" class="headerlink" title="2 八种基本数据类型汇总表"></a>2 八种基本数据类型汇总表</h3><table><thead><tr><th>基本数据类型</th><th>字节数</th><th>位数</th><th>取值范围</th><th>默认值</th><th>部门</th></tr></thead><tbody><tr><td>byte</td><td>1</td><td>8位</td><td>[2-7,27-1]</td><td>0</td><td>整数</td></tr><tr><td>short</td><td>2</td><td>16位</td><td>[2-15,215-1]</td><td>0</td><td>整数</td></tr><tr><td>int</td><td>4</td><td>32位</td><td>[2-31,231-1]</td><td>0</td><td>整数</td></tr><tr><td>long</td><td>8</td><td>64位</td><td>[2-63,263-1]</td><td>0L</td><td>整数</td></tr><tr><td>boolean</td><td>1</td><td>8位</td><td>true,false</td><td>false</td><td>特殊</td></tr><tr><td>char</td><td>2</td><td>16位</td><td>[0,216-1]</td><td>空格字符</td><td>特殊</td></tr><tr><td>float</td><td>4</td><td>32位</td><td>[2-31,231-1]</td><td>0f</td><td>小数</td></tr><tr><td>double</td><td>8</td><td>64位</td><td>[2-31,231-1]</td><td>0.00</td><td>小数</td></tr></tbody></table><p>注意:float的默认值为0f是因为定义float变量并初始化时,变量值后一定要加f,才代表该变量为float类型的数.而long变量并初始化时,变量值后一定要加L,因为这样才代表是long类型的数字,否则默认就为int类型</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2023/11/07/hello-world/"/>
       <url>/2023/11/07/hello-world/</url>

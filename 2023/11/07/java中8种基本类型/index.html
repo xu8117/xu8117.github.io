@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="1.分析1.1 八种基本数据类型的分类从数据类型的值来看,可以分为整数部分、小数部分和特殊部分 整数部分有byte short int long 小数部分有float和double 特殊部分有char(字符)和boolean(布尔) 1.2 数据类型的取值范围如何记忆?一般来说:取值范围为[2-(n-1),2n-1-1],其中n代表位数,位数&#x3D;字节数\8;整型从小到大的字节数分别为1,2">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java中8种基本类型">
+<meta property="og:url" content="https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/index.html">
+<meta property="og:site_name" content="live4today">
+<meta property="og:description" content="1.分析1.1 八种基本数据类型的分类从数据类型的值来看,可以分为整数部分、小数部分和特殊部分 整数部分有byte short int long 小数部分有float和double 特殊部分有char(字符)和boolean(布尔) 1.2 数据类型的取值范围如何记忆?一般来说:取值范围为[2-(n-1),2n-1-1],其中n代表位数,位数&#x3D;字节数\8;整型从小到大的字节数分别为1,2">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-07T13:03:16.000Z">
+<meta property="article:modified_time" content="2023-11-08T00:08:35.921Z">
+<meta property="article:author" content="xu8117">
+<meta property="article:tag" content="java">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>java中8种基本类型</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2023/11/07/hello-world/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&text=java中8种基本类型"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&is_video=false&description=java中8种基本类型"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=java中8种基本类型&body=Check out this article: https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&name=java中8种基本类型&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&t=java中8种基本类型"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">1.分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">1.1 八种基本数据类型的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BF%86"><span class="toc-number">3.</span> <span class="toc-text">1.2 数据类型的取值范围如何记忆?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BF%86"><span class="toc-number">4.</span> <span class="toc-text">1.3 数据类型的默认值如何记忆?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%B1%87%E6%80%BB%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">2 八种基本数据类型汇总表</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        java中8种基本类型
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">xu8117</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2023-11-07T13:03:16.000Z" class="dt-published" itemprop="datePublished">2023-11-07</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/java/" rel="tag">java</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h3 id="1-分析"><a href="#1-分析" class="headerlink" title="1.分析"></a>1.分析</h3><h3 id="1-1-八种基本数据类型的分类"><a href="#1-1-八种基本数据类型的分类" class="headerlink" title="1.1 八种基本数据类型的分类"></a>1.1 八种基本数据类型的分类</h3><p>从数据类型的值来看,可以分为整数部分、小数部分和特殊部分</p>
+<p>整数部分有byte short int long</p>
+<p>小数部分有float和double</p>
+<p>特殊部分有char(字符)和boolean(布尔)</p>
+<h3 id="1-2-数据类型的取值范围如何记忆"><a href="#1-2-数据类型的取值范围如何记忆" class="headerlink" title="1.2 数据类型的取值范围如何记忆?"></a>1.2 数据类型的取值范围如何记忆?</h3><p>一般来说:取值范围为[2-(n-1),2n-1-1],其中n代表位数,<em><em>位数&#x3D;字节数\8</em>;<br>整型从小到大的字节数分别为</em><em>1,2,4,8</em>*</p>
+<p>布尔类型boolean为<strong>1</strong>,char的字节数为<strong>2</strong>,</p>
+<p>float字节数为4,double字节数为8</p>
+<p>字节数的记忆就是两套1 2 4 8,其中一套为整型,它的排列为升序(从小到大)</p>
+<p>一套是特殊加上小数的组合,</p>
+<p>其中特殊部分 按照英文字母顺序<strong>升序</strong> 排列(先b后c)</p>
+<p>小数部分 按照英文字母<strong>降序</strong>(f–&gt;d)排列</p>
+<p>我们常说,<strong>特殊有优先待遇,因而特殊在前面</strong></p>
+<p>所以1,2,4,8对应的排列就为: boolean char float double</p>
+<p>而特殊部分除了有优先待遇,还有<strong>自身的特殊</strong></p>
+<p>boolean用于<strong>条件判断</strong>,值为false或true</p>
+<p><strong>char类型不带符号</strong>,所以取值只取大于等于0且小于等于2n-1</p>
+<h3 id="1-3-数据类型的默认值如何记忆"><a href="#1-3-数据类型的默认值如何记忆" class="headerlink" title="1.3 数据类型的默认值如何记忆?"></a>1.3 数据类型的默认值如何记忆?</h3><p>默认值为啥都没有,在整数部分中体现形式为0,单精度体现形式为0.0</p>
+<p>双精度体现形式为0.00,char类型体现形式为空格,boolean类型的体现形式为false</p>
+<h3 id="2-八种基本数据类型汇总表"><a href="#2-八种基本数据类型汇总表" class="headerlink" title="2 八种基本数据类型汇总表"></a>2 八种基本数据类型汇总表</h3><table>
+<thead>
+<tr>
+<th>基本数据类型</th>
+<th>字节数</th>
+<th>位数</th>
+<th>取值范围</th>
+<th>默认值</th>
+<th>部门</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>byte</td>
+<td>1</td>
+<td>8位</td>
+<td>[2-7,27-1]</td>
+<td>0</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>16位</td>
+<td>[2-15,215-1]</td>
+<td>0</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>32位</td>
+<td>[2-31,231-1]</td>
+<td>0</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td>64位</td>
+<td>[2-63,263-1]</td>
+<td>0L</td>
+<td>整数</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1</td>
+<td>8位</td>
+<td>true,false</td>
+<td>false</td>
+<td>特殊</td>
+</tr>
+<tr>
+<td>char</td>
+<td>2</td>
+<td>16位</td>
+<td>[0,216-1]</td>
+<td>空格字符</td>
+<td>特殊</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>32位</td>
+<td>[2-31,231-1]</td>
+<td>0f</td>
+<td>小数</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>64位</td>
+<td>[2-31,231-1]</td>
+<td>0.00</td>
+<td>小数</td>
+</tr>
+</tbody></table>
+<p>注意:float的默认值为0f是因为定义float变量并初始化时,变量值后一定要加f,才代表该变量为float类型的数.而long变量并初始化时,变量值后一定要加L,因为这样才代表是long类型的数字,否则默认就为int类型</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">1.分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">2.</span> <span class="toc-text">1.1 八种基本数据类型的分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%8F%96%E5%80%BC%E8%8C%83%E5%9B%B4%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BF%86"><span class="toc-number">3.</span> <span class="toc-text">1.2 数据类型的取值范围如何记忆?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC%E5%A6%82%E4%BD%95%E8%AE%B0%E5%BF%86"><span class="toc-number">4.</span> <span class="toc-text">1.3 数据类型的默认值如何记忆?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%B1%87%E6%80%BB%E8%A1%A8"><span class="toc-number">5.</span> <span class="toc-text">2 八种基本数据类型汇总表</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&text=java中8种基本类型"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&is_video=false&description=java中8种基本类型"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=java中8种基本类型&body=Check out this article: https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&title=java中8种基本类型"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&name=java中8种基本类型&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://xu8117.gitee.io/2023/11/07/java%E4%B8%AD8%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/&t=java中8种基本类型"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2023
+    xu8117
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="http://github.com/probberechts">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
