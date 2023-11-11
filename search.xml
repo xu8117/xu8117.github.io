@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>常用SQL</title>
+      <link href="/2023/11/11/%E5%B8%B8%E7%94%A8SQL/"/>
+      <url>/2023/11/11/%E5%B8%B8%E7%94%A8SQL/</url>
+      
+        <content type="html"><![CDATA[<p>将某个字段的值更新为两位小数<br>UPDATE your_table<br>SET amount &#x3D; ROUND(amount, 2);</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>centos8安装微擎独立版</title>
       <link href="/2023/11/08/centos8%E5%AE%89%E8%A3%85%E5%BE%AE%E6%93%8E%E7%8B%AC%E7%AB%8B%E7%89%88/"/>
       <url>/2023/11/08/centos8%E5%AE%89%E8%A3%85%E5%BE%AE%E6%93%8E%E7%8B%AC%E7%AB%8B%E7%89%88/</url>
