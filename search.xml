@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>win10删除第三方增加的设备和驱动器</title>
+      <link href="/2023/11/13/win10%E5%88%A0%E9%99%A4%E7%AC%AC%E4%B8%89%E6%96%B9%E5%A2%9E%E5%8A%A0%E7%9A%84%E8%AE%BE%E5%A4%87%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8/"/>
+      <url>/2023/11/13/win10%E5%88%A0%E9%99%A4%E7%AC%AC%E4%B8%89%E6%96%B9%E5%A2%9E%E5%8A%A0%E7%9A%84%E8%AE%BE%E5%A4%87%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8/</url>
+      
+        <content type="html"><![CDATA[<p>1、在开始-运行输入regedit后回车</p><p>2、定位到:</p><p>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\</p><p>如果上述的注册表为空，或者无效，则定位到HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace\</p><p>将不是系统自带的全删掉，最好右键NameSpace备份一下，以免误删</p><p>其他不在下面列表的可以一个一个删除尝试，但一定要记得备份（右键导出再删除，一个一个试）</p><p>系统自带的参考：<br>{1CF1260C-4DD0-4ebb-811F-33C572699FDE}–音乐<br>{374DE290-123F-4565-9164-39C4925E467B}–下载<br>{3ADDbai-EB32-4cb0-BBD7-DFA0ABB5ACCA}–图片<br>{A0953C92-50DC-43bf-BE83-3742FED03C9C}–视频<br>{A8CDFF1C-4878-43be-B5FD-F8091C1C60D0}–文档<br>{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}–桌面</p><p>{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}–3D对象文件夹</p><p>自己找到和网络上整理的参考：<br>{3C6C4AE3-9AE3-436F-BE29-E1C2F38A5EEC}–和彩云<br>{9EA08619-C91E-46D0-9FB5-22DA6D9EC653}–酷狗音乐<br>{2F258B03-3CB4-4AA3-8F08-A3544D4BD64D}–kodbox</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mysql修改连接数</title>
       <link href="/2023/11/13/mysql%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E6%95%B0/"/>
       <url>/2023/11/13/mysql%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E6%95%B0/</url>
