@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>mysql修改连接数</title>
+      <link href="/2023/11/13/mysql%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E6%95%B0/"/>
+      <url>/2023/11/13/mysql%E4%BF%AE%E6%94%B9%E8%BF%9E%E6%8E%A5%E6%95%B0/</url>
+      
+        <content type="html"><![CDATA[<p>查看连接数<br>show variables like ‘%max_connections%’</p><p>临时修改<br>set global max_connections&#x3D;500</p><p>永久修改<br>修改my.cnf中[mysqld]下的参数max_connections &#x3D; 1000</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>docker常用命令</title>
+      <link href="/2023/11/12/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2023/11/12/docker%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用SQL</title>
       <link href="/2023/11/11/%E5%B8%B8%E7%94%A8SQL/"/>
       <url>/2023/11/11/%E5%B8%B8%E7%94%A8SQL/</url>
@@ -47,7 +73,7 @@
       <link href="/2023/11/08/docker%E5%AE%89%E8%A3%85mysql/"/>
       <url>/2023/11/08/docker%E5%AE%89%E8%A3%85mysql/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<p>-p: 指定端口映射，格式为：主机(宿主)端口:容器端口</p>]]></content>
       
       
       
