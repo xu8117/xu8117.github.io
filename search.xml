@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>v2ray常见问题</title>
+      <link href="/2023/11/13/v2ray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+      <url>/2023/11/13/v2ray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p>运行命令<br>v2ray run -config &#x2F;usr&#x2F;local&#x2F;etc&#x2F;v2ray&#x2F;config.json</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>win10删除第三方增加的设备和驱动器</title>
       <link href="/2023/11/13/win10%E5%88%A0%E9%99%A4%E7%AC%AC%E4%B8%89%E6%96%B9%E5%A2%9E%E5%8A%A0%E7%9A%84%E8%AE%BE%E5%A4%87%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8/"/>
       <url>/2023/11/13/win10%E5%88%A0%E9%99%A4%E7%AC%AC%E4%B8%89%E6%96%B9%E5%A2%9E%E5%8A%A0%E7%9A%84%E8%AE%BE%E5%A4%87%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8/</url>
