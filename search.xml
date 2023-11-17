@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>v2ray一键部署</title>
+      <link href="/2023/11/17/v2ray%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/"/>
+      <url>/2023/11/17/v2ray%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.9sb.net/archives/v2ray-setup.html">https://www.9sb.net/archives/v2ray-setup.html</a></p><p>v2ray info 查看 V2Ray 配置信息<br>v2ray config 修改 V2Ray 配置<br>v2ray link 生成 V2Ray 配置文件链接<br>v2ray infolink 生成 V2Ray 配置信息链接<br>v2ray qr 生成 V2Ray 配置二维码链接<br>v2ray ss 修改 Shadowsocks 配置<br>v2ray ssinfo 查看 Shadowsocks 配置信息<br>v2ray ssqr 生成 Shadowsocks 配置二维码链接<br>v2ray status 查看 V2Ray 运行状态<br>v2ray start 启动 V2Ray<br>v2ray stop 停止 V2Ray<br>v2ray restart 重启 V2Ray<br>v2ray log 查看 V2Ray 运行日志<br>v2ray update 更新 V2Ray<br>v2ray update.sh 更新 V2Ray 管理脚本<br>v2ray uninstall 卸载 V2Ray</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>v2ray常见问题</title>
       <link href="/2023/11/13/v2ray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
       <url>/2023/11/13/v2ray%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/</url>
