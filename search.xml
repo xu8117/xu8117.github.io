@@ -4,6 +4,32 @@
   
     
     <entry>
+      <title>wxid加好友的方法</title>
+      <link href="/2023/11/20/wxid%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E6%96%B9%E6%B3%95/"/>
+      <url>/2023/11/20/wxid%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>微信还没设置微信号，就只能获取到对方的wxid，这个wxid是无法直接搜索微信号进行添加的。</p><p>那么如何通过这个wxid进行添加好友呢？以下方法可以尝试。</p><p>方法<br><a href="weixin://contacts/profile/换成你要加的wxid">wxid加好友</a><br>以上代码，需要在Android手机的微信，通过聊天对话框发送出去，就成了可点击的字体，点击进去就可以直达加好友界面。</p><p>当前版本：3.9.8.15</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Typecho好用插件</title>
+      <link href="/2023/11/17/Typecho%E5%A5%BD%E7%94%A8%E6%8F%92%E4%BB%B6/"/>
+      <url>/2023/11/17/Typecho%E5%A5%BD%E7%94%A8%E6%8F%92%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>标签云插件<br><a href="http://www.lopwon.com/lopwon-tags.html">http://www.lopwon.com/lopwon-tags.html</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>v2ray一键部署</title>
       <link href="/2023/11/17/v2ray%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/"/>
       <url>/2023/11/17/v2ray%E4%B8%80%E9%94%AE%E9%83%A8%E7%BD%B2/</url>
