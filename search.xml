@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>宝塔安装JDK并配置环境变量</title>
+      <link href="/2023/11/22/%E5%AE%9D%E5%A1%94%E5%AE%89%E8%A3%85JDK%E5%B9%B6%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
+      <url>/2023/11/22/%E5%AE%9D%E5%A1%94%E5%AE%89%E8%A3%85JDK%E5%B9%B6%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
+      
+        <content type="html"><![CDATA[<p>首先在&#x2F;etc&#x2F;profile.d目录下新建一个java.sh脚本（或者使用宝塔更方便）</p><p>sudo touch &#x2F;etc&#x2F;profile.d&#x2F;java.sh</p><p>然后给该文件赋上可写和可执行权限</p><p>sudo chmod a+wx &#x2F;etc&#x2F;profile.d&#x2F;java.sh<br>执行以下命令进入vim编辑脚本</p><p>sudo vi &#x2F;etc&#x2F;profile.d&#x2F;java.sh<br>按i，进入编辑模式，输入以下两行代码</p><p>export JAVA_HOME&#x3D;&#x2F;usr&#x2F;java&#x2F;jdk1.8.0_121  &#x2F;&#x2F;jdk安装路径<br>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin<br>按esc退出编辑，输入:wq!保存并退出<br>运行脚本，使用如下命令进入路径：</p><p>cd &#x2F;etc&#x2F;profile.d&#x2F;<br>然后使用source命令执行该脚本</p><p>source java.sh<br>在任意目录下，输入java版本，发现java环境运行正常。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>wxid加好友的方法</title>
       <link href="/2023/11/20/wxid%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E6%96%B9%E6%B3%95/"/>
       <url>/2023/11/20/wxid%E5%8A%A0%E5%A5%BD%E5%8F%8B%E7%9A%84%E6%96%B9%E6%B3%95/</url>
