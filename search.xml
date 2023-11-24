@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>请在mysql配置文件修sql-mode为NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</title>
+      <link href="/2023/11/24/%E8%AF%B7%E5%9C%A8mysql%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%AEsql-mode%E4%B8%BANO-AUTO-CREATE-USER-NO-ENGINE-SUBSTITUTION/"/>
+      <url>/2023/11/24/%E8%AF%B7%E5%9C%A8mysql%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BF%AEsql-mode%E4%B8%BANO-AUTO-CREATE-USER-NO-ENGINE-SUBSTITUTION/</url>
+      
+        <content type="html"><![CDATA[<p>先执行show variables like “%sql_mode%”</p><p>如果结果中没有NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</p><p>复制查询结果，并将缺少的加入到结果最后，中间要有英文逗号</p><p>然后执行</p><p>set @@GLOBAL.sql_mode&#x3D;’’;<br>set sql_mode &#x3D;’拼接后的结果’;</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宝塔安装JDK并配置环境变量</title>
       <link href="/2023/11/22/%E5%AE%9D%E5%A1%94%E5%AE%89%E8%A3%85JDK%E5%B9%B6%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/"/>
       <url>/2023/11/22/%E5%AE%9D%E5%A1%94%E5%AE%89%E8%A3%85JDK%E5%B9%B6%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</url>
